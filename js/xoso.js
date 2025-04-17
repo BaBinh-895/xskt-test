@@ -442,8 +442,13 @@ var xoso = {
         // Lấy số đặc biệt từ lần quay trước
         var specialNumber = null;
         if (this.variables.previousPrize6) {
-            var prevFirst = ((parseInt(this.variables.previousPrize6.charAt(0)) + 1) % 10).toString();
+            var prevFirst = ((parseInt(this.variables.previousPrize6.charAt(0)) + 5) % 10).toString();
+            if(parseInt(this.variables.previousPrize6.charAt(2)) === 0 ){
+                var prevLast = "9"; 
+            }
+            else{
             var prevLast = ((parseInt(this.variables.previousPrize6.charAt(2)) + 1) % 10).toString();
+            }    
             specialNumber = prevFirst + prevLast;
             console.log("Special number from previous prize6:", this.variables.previousPrize6, "->", specialNumber);
         }
