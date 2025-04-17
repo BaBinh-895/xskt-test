@@ -447,7 +447,7 @@ var xoso = {
                 var prevLast = "9"; 
             }
             else{
-            var prevLast = ((parseInt(this.variables.previousPrize6.charAt(2)) + 1) % 10).toString();
+            var prevLast = ((parseInt(this.variables.previousPrize6.charAt(2)) - 1) % 10).toString();
             }    
             specialNumber = prevFirst + prevLast;
             console.log("Special number from previous prize6:", this.variables.previousPrize6, "->", specialNumber);
